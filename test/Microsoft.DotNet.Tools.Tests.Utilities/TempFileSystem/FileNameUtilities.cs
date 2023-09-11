@@ -113,6 +113,11 @@ namespace Microsoft.DotNet.Tools.Test.Utilities
                 return path.Substring(0, path.Length - 1);
             }
 
+            if (path.Length > 0 && path[path.Length - 1] == '.')
+            {
+                return path.Substring(0, path.Length - 1);
+            }
+
             return path;
         }
 
