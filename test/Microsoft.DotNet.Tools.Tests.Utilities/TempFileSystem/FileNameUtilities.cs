@@ -3,6 +3,90 @@
 
 namespace Microsoft.DotNet.Tools.Test.Utilities
 {
+    internal class CS_R1137_Base
+    {
+        public CS_R1137_Base(int a = 1)
+        {
+            Console.WriteLine(a);
+        }
+    }
+
+    internal class CS_R1137 : CS_R1137_Base
+{
+    public int a = 1;
+    protected int b = 2;
+    protected const int c = 3;
+    protected readonly int d = 4;
+
+    // [CS-R1137]: 17
+    private int e = 4;
+    private int f = 5;
+    private int g = 6;
+
+    // [CS-R1137]: 17
+    private int h;
+    private int i;
+    private int j;
+    private int k;
+    private int l;
+    private static int m;
+    private int n;
+    private int o;
+    private bool p;
+
+    public int I
+    {
+        get => i;
+        set => i = value;
+    }
+
+    public int J
+    {
+        get => j;
+        set => this.j = value;
+    }
+
+    public CS_R1137() : base(++m)
+    {
+        d *= 2;
+        h *= 3;
+    }
+
+    public CS_R1137(int a)
+    {
+        this.a = a;
+    }
+
+    public void M1()
+    {
+        b += 1;
+        ++o;
+        --o;
+    }
+
+    public void M2()
+    {
+        f += 1;
+        n++;
+        n--;
+        _ = n!;
+        p = !p;
+        this.g -= 1;
+    }
+
+    public void M3()
+    {
+        Interlocked.Increment(ref k);
+    }
+
+    public void M4()
+    {
+        Interlocked.Increment(ref this.l);
+    }
+}
+
+
+
     /// <summary>
     /// Implements a few file name utilities that are needed by the compiler.
     /// In general the compiler is not supposed to understand the format of the paths.
