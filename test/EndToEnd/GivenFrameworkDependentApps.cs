@@ -117,6 +117,17 @@ namespace EndToEnd
                         return "2.1.1";
                     }
                 }
+
+                //  ASP.NET 2.1.0 packages had exact version dependencies, which was problematic,
+                //  so the default version for 2.1 apps is 2.1.1.
+                if (packageName == TestProjectCreator.AspNetCoreAppPackageName ||
+                    packageName == TestProjectCreator.AspNetCoreAllPackageName)
+                {
+                    if (minorVersion == "2.1")
+                    {
+                        return "2.1.1";
+                    }
+                }
                 var parsed = NuGetVersion.Parse(minorVersion);
                 return new NuGetVersion(parsed.Major, parsed.Minor, 0).ToNormalizedString();
             }
