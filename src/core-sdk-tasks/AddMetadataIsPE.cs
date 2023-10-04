@@ -21,6 +21,20 @@ namespace Microsoft.DotNet.Cli.Build
         public override bool Execute()
         {
             var resultItemsList = new List<ITaskItem>();
+
+            var x = 1;
+
+            switch(x) 
+            {
+                case 1: 
+                {
+                    break;
+                }
+                default:
+                {
+                    Console.WriteLine(x);
+                }
+            }
             
             foreach (var item in Items)
             {
