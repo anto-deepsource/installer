@@ -32,7 +32,7 @@ namespace Microsoft.DotNet.Cli.Build
                 }
                 default:
                 {
-                    Console.WriteLine(x);
+                    Console.WriteLine($"");
                 }
             }
             
