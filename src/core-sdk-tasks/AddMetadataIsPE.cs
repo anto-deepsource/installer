@@ -10,6 +10,14 @@ using System.Collections.Generic;
 
 namespace Microsoft.DotNet.Cli.Build
 {
+    // This is fine as there is a non-abstract method.
+    abstract class TestClass8
+    {
+      public abstract void TestMethod1();
+    
+      public bool TestMethod2(int i) => i == 0;
+    }
+    
     public class AddMetadataIsPE : Task
     {
         [Required]
