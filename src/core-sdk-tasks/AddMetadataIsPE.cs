@@ -30,6 +30,9 @@ namespace Microsoft.DotNet.Cli.Build
         {
             var resultItemsList = new List<ITaskItem>();
 
+            string aa = "abcdef";
+            string subString = aa.Substring(0, 2);
+
             var x = 1;
 
             switch(x) 
