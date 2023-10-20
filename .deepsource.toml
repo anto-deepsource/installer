@@ -2,3 +2,6 @@ version = 1
 
 [[analyzers]]
 name = "csharp"
+
+  [analyzers.meta]
+  sdk_version = "standard-2.0"
