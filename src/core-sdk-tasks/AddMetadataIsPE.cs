@@ -17,6 +17,16 @@ namespace Microsoft.DotNet.Cli.Build
     
       public bool TestMethod2(int i) => i == 0;
     }
+
+    // [CS-R1134]: 1
+    internal record CS_R1134_2
+    {
+    }
+    
+    // [CS-R1134]: 1
+    internal record CS_R1134_3()
+    {
+    }
     
     public class AddMetadataIsPE : Task
     {
