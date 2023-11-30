@@ -10,6 +10,24 @@ using System.Collections.Generic;
 
 namespace Microsoft.DotNet.Cli.Build
 {
+    // This is fine as there is a non-abstract method.
+    abstract class TestClass8
+    {
+      public abstract void TestMethod1();
+    
+      public bool TestMethod2(int i) => i == 0;
+    }
+
+    // [CS-R1134]: 1
+    internal record CS_R1134_2
+    {
+    }
+    
+    // [CS-R1134]: 1
+    internal record CS_R1134_3()
+    {
+    }
+    
     public class AddMetadataIsPE : Task
     {
         [Required]
@@ -21,6 +39,9 @@ namespace Microsoft.DotNet.Cli.Build
         public override bool Execute()
         {
             var resultItemsList = new List<ITaskItem>();
+
+            string aa = "abcdef";
+            string subString = aa.Substring(0, 2);
 
             var x = 1;
 
