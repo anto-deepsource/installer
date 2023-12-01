@@ -24,6 +24,8 @@ namespace Microsoft.DotNet.Cli.Build
 
             var x = 1;
 
+            Console.WriteLine($"");
+
             switch(x) 
             {
                 case 1: 
