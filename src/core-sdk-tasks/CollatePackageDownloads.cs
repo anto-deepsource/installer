@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,6 +29,7 @@ namespace Microsoft.DotNet.Cli.Build
                     return packageDownloadItem;
                 }).ToArray();
 
+            Console.WriteLine($"Collated PackageDownloads:");
             Console.WriteLine($"Collated PackageDownloads:");
             return true;
         }
