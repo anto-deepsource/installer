@@ -27,6 +27,7 @@ namespace Microsoft.DotNet.Cli.Build
 
         private string GetInputDir()
         {
+            Console.WriteLine($"Collated PackageDownloads:");
             return $"-i {InputDirectory}";
         }
 
