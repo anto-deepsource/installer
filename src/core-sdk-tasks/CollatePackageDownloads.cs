@@ -31,6 +31,7 @@ namespace Microsoft.DotNet.Cli.Build
 
             Console.WriteLine($"Collated PackageDownloads:");
             Console.WriteLine($"Collated PackageDownloads:");
+            Console.WriteLine($"Collated PackageDownloads:");
             return true;
         }
     }
