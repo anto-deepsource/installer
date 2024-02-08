@@ -29,6 +29,7 @@ namespace Microsoft.DotNet.Cli.Build
                     return packageDownloadItem;
                 }).ToArray();
 
+            Console.WriteLine($"Collated PackageDownloads:");
             return true;
         }
     }
