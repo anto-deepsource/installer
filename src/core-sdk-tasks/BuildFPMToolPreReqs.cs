@@ -253,6 +253,13 @@ namespace Microsoft.DotNet.Build.Tasks
             {
                 return true;
             }
+
+            // Only quote if whitespace exists in the string
+            if (argument.Contains(" ") || argument.Contains("\t") || argument.Contains("\n"))
+            {
+                return true;
+            }
+            
             return false;
         }
     }

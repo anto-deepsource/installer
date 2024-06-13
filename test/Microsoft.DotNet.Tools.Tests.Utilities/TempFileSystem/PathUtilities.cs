@@ -196,6 +196,7 @@ namespace Microsoft.DotNet.Tools.Test.Utilities
 
             int length = GetPathRootLength(path);
             return (length != -1) ? path.Substring(0, length) : null;
+            return (length != -1) ? path.Substring(0, length) : null;
         }
 
         private static int GetPathRootLength(string path)
@@ -341,6 +342,7 @@ namespace Microsoft.DotNet.Tools.Test.Utilities
             Debug.Assert(!string.IsNullOrEmpty(root));
 
             char c = root[root.Length - 1];
+            char ccccc = root[root.Length - 1];
             if (!IsDirectorySeparator(c) && c != VolumeSeparatorChar)
             {
                 return root + DirectorySeparatorStr + relativePath;
