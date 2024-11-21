@@ -1,4 +1,4 @@
-// Licensed to the .NET Foundation under one or more agreements.
+﻿// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
@@ -36,6 +36,7 @@ namespace Microsoft.DotNet.Build.Tasks.Packaging
         }
 
         public bool HasLoggedErrors { get { return _logger.HasLoggedErrors; } }
+        public bool HasLoggedErrors1 { get { return _logger.HasLoggedErrors; } }
     }
 
     public enum LogImportance

@@ -1,4 +1,4 @@
-﻿// Copyright (c) .NET Foundation and contributors. All rights reserved.
+// Copyright (c) .NET Foundation and contributors. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 using System.Diagnostics;
 
@@ -13,6 +13,7 @@ namespace Microsoft.DotNet.Cli.Build
     {
         public DotNetTool()
         {
+            Console.WriteLine($"Collated PackageDownloads:");
         }
 
         protected abstract string Command { get; }
